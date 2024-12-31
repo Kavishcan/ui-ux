@@ -57,7 +57,7 @@ export default function ButtonShowcase() {
           <ButtonSection
             title="Standard Button"
             description="A basic button component with customizable styles."
-            usage={`<Button>Button</Button>`}
+            usage={`ShadCN Button`}
           >
             <Button>Button</Button>
           </ButtonSection>
@@ -65,7 +65,16 @@ export default function ButtonShowcase() {
           <ButtonSection
             title="Dotted Button"
             description="A button with a dotted border effect."
-            usage={`<DottedButton />`}
+            usage={`const DottedButton = () => {
+  return (
+    <button className="rounded-2xl border-2 border-dashed border-black bg-white px-6 py-3 font-semibold uppercase text-black transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none">
+      Hover me
+    </button>
+  );
+};
+
+export default DottedButton;
+`}
           >
             <DottedButton />
           </ButtonSection>
@@ -92,7 +101,36 @@ export default NeuButton;
           <ButtonSection
             title="Neu Button"
             description="A button with a neu hover effect."
-            usage={`<DrawOutlineButton>Hover me</DrawOutlineButton>`}
+            usage={`const DrawOutlineButton = ({
+              children,
+              ...rest
+            }: React.DetailedHTMLProps<
+              React.ButtonHTMLAttributes<HTMLButtonElement>,
+              HTMLButtonElement
+            >) => {
+              return (
+                <button
+                  {...rest}
+                  className="group relative px-4 py-2 font-medium text-slate-100 transition-colors duration-[400ms] hover:text-indigo-300"
+                >
+                  <span>{children}</span>
+            
+                  {/* TOP */}
+                  <span className="absolute left-0 top-0 h-[2px] w-0 bg-indigo-300 transition-all duration-100 group-hover:w-full" />
+            
+                  {/* RIGHT */}
+                  <span className="absolute right-0 top-0 h-0 w-[2px] bg-indigo-300 transition-all delay-100 duration-100 group-hover:h-full" />
+            
+                  {/* BOTTOM */}
+                  <span className="absolute bottom-0 right-0 h-[2px] w-0 bg-indigo-300 transition-all delay-200 duration-100 group-hover:w-full" />
+            
+                  {/* LEFT */}
+                  <span className="absolute bottom-0 left-0 h-0 w-[2px] bg-indigo-300 transition-all delay-300 duration-100 group-hover:h-full" />
+                </button>
+              );
+            };
+            
+            export default DrawOutlineButton;`}
           >
             <div className="grid place-content-center bg-slate-900 p-4">
               <DrawOutlineButton>Hover me</DrawOutlineButton>
