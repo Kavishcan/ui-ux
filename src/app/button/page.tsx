@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import DottedButton from "@/components/ui/dottedButton";
+import DrawOutlineButton from "@/components/ui/drawOutlineButton";
+import NeuButton from "@/components/ui/neuButton";
 import ButtonWrapper from "@/components/ui/spotlightButton";
 
 export default function ButtonShowcase() {
@@ -25,6 +27,23 @@ export default function ButtonShowcase() {
             usage={`<DottedButton />`}
           >
             <DottedButton />
+          </ButtonSection>
+
+          <ButtonSection
+            title="Neu Button"
+            description="A button with a neu hover effect."
+            usage={`<NeuButton />`}
+          >
+            <NeuButton />
+          </ButtonSection>
+          <ButtonSection
+            title="Neu Button"
+            description="A button with a neu hover effect."
+            usage={`<DrawOutlineButton>Hover me</DrawOutlineButton>`}
+          >
+            <div className="grid place-content-center bg-slate-900 p-4">
+              <DrawOutlineButton>Hover me</DrawOutlineButton>
+            </div>
           </ButtonSection>
 
           <ButtonSection
