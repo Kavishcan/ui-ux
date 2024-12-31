@@ -22,13 +22,6 @@ const navigation = [
       { title: "Button", icon: Book, url: "/button" },
     ],
   },
-  //   {
-  //     title: "Support",
-  //     items: [
-  //       { title: "Settings", icon: Settings, url: "/settings" },
-  //       { title: "Help", icon: HelpCircle, url: "/help" },
-  //     ],
-  //   },
 ];
 
 export function AppSidebar() {
