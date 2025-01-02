@@ -46,7 +46,7 @@ export function AppSidebar() {
                     <SidebarMenuButton asChild isActive={pathname === item.url}>
                       <a href={item.url}>
                         <item.icon className="h-4 w-4" />
-                        <span>{item.title}</span>
+                        <span className="text-md font-bold">{item.title}</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>

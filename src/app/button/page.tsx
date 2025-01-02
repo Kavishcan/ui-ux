@@ -1,14 +1,16 @@
-import { Button } from "@/components/ui/button";
-import DottedButton from "@/components/ui/dottedButton";
-import DrawOutlineButton from "@/components/ui/drawOutlineButton";
-import NeuButton from "@/components/ui/neuButton";
-import ButtonWrapper from "@/components/ui/spotlightButton";
+import { Button } from "@/components/ui/buttons/button";
+import DottedButton from "@/components/ui/buttons/dottedButton";
+import DrawOutlineButton from "@/components/ui/buttons/drawOutlineButton";
+import NeuButton from "@/components/ui/buttons/neuButton";
+import ButtonWrapper from "@/components/ui/buttons/spotlightButton";
 import {
   dottedButtonUsage,
   neuButtonUsage,
   drawOutlineButtonUsage,
   spotlightButtonUsage,
+  neuButtonReverseUsage,
 } from "../../lib/constant";
+import NeuButtonRev from "@/components/ui/buttons/neuButtonReverse";
 
 interface ButtonSectionProps {
   title: string;
@@ -92,6 +94,14 @@ export default function ButtonShowcase() {
             <div className="grid place-content-center bg-slate-900 p-4">
               <DrawOutlineButton>Hover me</DrawOutlineButton>
             </div>
+          </ButtonSection>
+
+          <ButtonSection
+            title="Neu Button Reverse"
+            description="A button with a neu reverse hover effect."
+            usage={neuButtonReverseUsage}
+          >
+            <NeuButtonRev />
           </ButtonSection>
 
           <ButtonSection
